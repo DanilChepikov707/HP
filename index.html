@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Harry Potter</title>
+    <script src="./script.js" defer type="module"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="title">
+          <h1>Harry Potter</h1>
+          <p class="title__desc">
+            View all characters from the Harry Potter universe
+          </p>
+        </div>
+        <div class="search_engine">
+          <div class="search_engine__name">
+            <label class="character_name" for="inputName">Name</label>
+            <input
+              class="input_name"
+              type="text"
+              placeholder="Hermione"
+              id="inputName"
+            />
+          </div>
+          <div class="search_engine__school">
+            <label class="schools" for="school">School</label>
+            <select class="list_of_schools" name="" id="school"></select>
+          </div>
+        </div>
+        
+        <div class="cards"></div>
+      </div>
+    </main>
+  </body>
+</html>
