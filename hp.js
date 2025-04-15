@@ -1,5 +1,5 @@
 // https://hp-api.onrender.com/api/characters
-
+export const url = "https://hp-api.onrender.com/api/characters"
 
 export const hp = [
   {

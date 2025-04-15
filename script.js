@@ -1,15 +1,26 @@
-import { hp } from "./hp.js";
+import { url } from "./hp.js";
 
 const cards = document.querySelector(".cards");
 const houseSelect = document.querySelector(".list_of_schools");
 const inputName = document.querySelector(".input_name");
 
+let hp = [];
+
+const data = fetch(url);
+data
+  .then((res) => res.json())
+  .then((res) => {
+    hp = res;
+    renderCardsList(hp);
+    schoolOptionSelect(hp)
+  });
+
 houseSelect.addEventListener("change", () => serchByNameAndHouse(hp));
 
 inputName.addEventListener("input", () => serchByNameAndHouse(hp));
 
-renderCardsList(hp);
-schoolOptionSelect(hp);
+/* renderCardsList(hp); */
+/* schoolOptionSelect(hp); */
 
 function serchByNameAndHouse(arr) {
   let personName = inputName.value.toLowerCase().trim();
